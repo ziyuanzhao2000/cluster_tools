@@ -4,10 +4,10 @@ executables = client server
 CXX = c++
 O = 2
 
-server : server.o
+server : server.o helpers.o
 	$(CXX) -o server server.o helpers.o
 
-client : client.o 
+client : client.o helpers.o
 	$(CXX) -o client client.o helpers.o 
 
 client.o : client.cc helpers.hh 
