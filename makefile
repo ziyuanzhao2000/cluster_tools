@@ -1,3 +1,6 @@
+objects = client.o server.o helpers.o
+executables = client server
+
 CXX = c++
 O = 2
 
@@ -8,11 +11,11 @@ client : client.o
 	$(CXX) -o client client.o helpers.o 
 
 client.o : client.cc helpers.hh 
-	$(CXX) -c client.cc
+	$(CXX) -std=gnu++11 -c client.cc
 
 server.o : server.cc helpers.hh 
-	$(CXX) -c server.cc
+	$(CXX) -std=gnu++11 -c server.cc
 
 helpers.o : helpers.cc helpers.hh
-	$(CXX) -c helper.cc
+	$(CXX) -std=gnu++11 -c helper.cc
 
