@@ -17,5 +17,5 @@ server.o : server.cc helpers.hh
 	$(CXX) -std=gnu++11 -c server.cc
 
 helpers.o : helpers.cc helpers.hh
-	$(CXX) -std=gnu++11 -c helper.cc
+	$(CXX) -std=gnu++11 -c helpers.cc
 
